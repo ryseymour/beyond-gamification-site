@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond Gamification — AI &amp; Game-Based Learning Consulting | Ryan Seymour</title>
+  <meta name="description" content="Beyond Gamification is the consulting practice of Ryan Seymour — product leader and game designer helping EdTech teams, foundations, and educators build AI learning products that motivate, not just engage." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:title" content="Beyond Gamification — AI &amp; Game-Based Learning Consulting" />
+  <meta property="og:description" content="AI product strategy and game-based learning, grounded in learning science. Motivational design for AI in learning." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #F7F4ED;
+      --cream-2: #FBF9F4;
+      --slate: #2D3D43;
+      --slate-soft: #4A5C63;
+      --sage: #C2CFC4;
+      --sage-deep: #9DB1A2;
+      --peach: #F0C9BD;
+      --peach-deep: #E6A892;
+      --line: #E4DFD4;
+      --radius: 18px;
+      --maxw: 1080px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--slate);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .brand { font-family: "Poppins", sans-serif; }
+
+    a { color: inherit; }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- NAV ---------- */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(247,244,237,0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    nav .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .brand { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.01em; }
+    .brand span { color: var(--peach-deep); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      text-decoration: none; font-size: 0.95rem; font-weight: 500;
+      color: var(--slate-soft); transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--slate); }
+    .nav-cta {
+      background: var(--slate); color: var(--cream) !important;
+      padding: 9px 18px; border-radius: 999px; font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--slate-soft); }
+    @media (max-width: 680px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+    /* ---------- HERO ---------- */
+    .hero { position: relative; overflow: hidden; padding: 110px 0 90px; }
+    .hero-blob {
+      position: absolute; border-radius: 50%; z-index: 0; opacity: 0.9;
+    }
+    .blob-sage { width: 420px; height: 420px; background: var(--sage); top: -120px; right: -120px; }
+    .blob-peach { width: 220px; height: 220px; background: var(--peach); bottom: -90px; left: -70px; border-radius: 40% 60% 55% 45%; }
+    .hero .wrap { position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-block; font-weight: 600; font-size: 0.85rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--peach-deep); margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4rem); font-weight: 700;
+      line-height: 1.08; letter-spacing: -0.02em; max-width: 16ch;
+    }
+    .hero .lede {
+      font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--slate-soft);
+      max-width: 60ch; margin-top: 24px;
+    }
+    .hero-actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 600;
+      padding: 14px 28px; border-radius: 999px; transition: transform 0.12s, background 0.15s;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--slate); color: var(--cream); }
+    .btn-primary:hover { background: var(--slate-soft); }
+    .btn-ghost { background: transparent; color: var(--slate); border: 1.5px solid var(--slate); }
+    .btn-ghost:hover { background: var(--slate); color: var(--cream); }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 84px 0; }
+    .section-tag {
+      font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--sage-deep); margin-bottom: 14px;
+    }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.015em; line-height: 1.15; }
+    .section-intro { max-width: 62ch; color: var(--slate-soft); margin-top: 18px; font-size: 1.1rem; }
+
+    /* thesis */
+    .thesis { background: var(--slate); color: var(--cream); border-radius: var(--radius); margin-top: 0; }
+    .thesis-inner { padding: 70px 0; }
+    .thesis .section-tag { color: var(--peach); }
+    .thesis h2 { color: var(--cream); max-width: 22ch; }
+    .thesis blockquote {
+      font-family: "Poppins", sans-serif; font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+      font-weight: 500; line-height: 1.4; margin: 30px 0; max-width: 24ch;
+      border-left: 4px solid var(--peach); padding-left: 24px;
+    }
+    .thesis p { color: rgba(247,244,237,0.82); max-width: 60ch; font-size: 1.08rem; }
+
+    /* offerings grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 44px; }
+    .card {
+      background: var(--cream-2); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 30px 28px; transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(45,61,67,0.08); }
+    .card .dot { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; font-size: 1.2rem; margin-bottom: 16px; }
+    .card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; }
+    .card p { color: var(--slate-soft); font-size: 0.98rem; }
+    .card .who { display: block; margin-top: 14px; font-size: 0.82rem; font-weight: 600; color: var(--sage-deep); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* about */
+    .about { background: var(--sage); border-radius: var(--radius); }
+    .about-inner { padding: 64px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+    @media (max-width: 760px) { .about-inner { grid-template-columns: 1fr; gap: 30px; } }
+    .about .section-tag { color: var(--slate); }
+    .about h2 { max-width: 18ch; }
+    .about p { color: var(--slate-soft); margin-top: 16px; }
+    .cred-list { list-style: none; margin-top: 8px; }
+    .cred-list li { padding: 12px 0; border-bottom: 1px solid rgba(45,61,67,0.12); font-size: 0.98rem; }
+    .cred-list li:last-child { border-bottom: none; }
+    .cred-list strong { font-family: "Poppins", sans-serif; }
+
+    /* contact */
+    .contact { text-align: center; }
+    .contact h2 { max-width: 20ch; margin: 0 auto; }
+    .contact .section-intro { margin: 18px auto 0; }
+    .contact .hero-actions { justify-content: center; margin-top: 34px; }
+
+    /* footer */
+    footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--slate-soft); font-size: 0.9rem; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    footer a { color: var(--slate-soft); text-decoration: none; }
+    footer a:hover { color: var(--slate); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wrap">
+      <div class="brand">Beyond<span>Gamification</span></div>
+      <div class="nav-links">
+        <a href="#thesis">Approach</a>
+        <a href="#work">What I Do</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-blob blob-sage"></div>
+    <div class="hero-blob blob-peach"></div>
+    <div class="wrap">
+      <span class="eyebrow">Motivational design for AI in learning</span>
+      <h1>AI learning products that motivate &mdash; not just engage.</h1>
+      <p class="lede">
+        I help EdTech teams, foundations, and educators build AI tools that put learning science first and technology second &mdash;
+        drawing on a career shipping AI-powered classroom tools, Minecraft Education at Mojang, and Smithsonian science games.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Start a conversation</a>
+        <a href="#work" class="btn btn-ghost">See how I help</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- THESIS -->
+  <section id="thesis" style="padding-top:0;">
+    <div class="wrap">
+      <div class="thesis">
+        <div class="wrap thesis-inner">
+          <div class="section-tag">The thesis</div>
+          <h2>AI in education is about to repeat the gamification mistake.</h2>
+          <blockquote>&ldquo;Gamify it&rdquo; became points and badges that raised anxiety. &ldquo;AI it&rdquo; is heading the same way.</blockquote>
+          <p>
+            A decade ago, the pressure was to bolt game mechanics onto learning &mdash; and we got leaderboards that undermined the very motivation they promised.
+            Today the pressure is to bolt AI onto everything. The fix is the same: design from how people actually learn &mdash; autonomy, competence, and connection &mdash;
+            and treat the technology as a tool in service of a teacher's judgment, not a replacement for it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section id="work">
+    <div class="wrap">
+      <div class="section-tag">What I do</div>
+      <h2>Strategy and hands-on help across the AI&nbsp;EdTech lifecycle.</h2>
+      <p class="section-intro">Engagements range from a focused workshop to ongoing product leadership. Every one is grounded in the same principle: motivation before mechanics.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="dot" style="background:var(--sage);">&#128202;</div>
+          <h3>AI EdTech Product Audits</h3>
+          <p>A structured review of your AI product strategy, roadmap, and shipped features &mdash; with a prioritized plan for what to build, fix, or kill.</p>
+          <span class="who">Founders &middot; Foundations</span>
+        </div>
+
+        <div class="card">
+          <div class="dot" style="background:var(--peach);">&#129504;</div>
+          <h3>Fractional Product Leadership</h3>
+          <p>Senior product partnership for early-stage EdTech teams &mdash; roadmap, prioritization, experimentation, and coaching, a day or two a week.</p>
+          <span class="who">Seed &amp; Series A startups</span>
+        </div>
+
+        <div class="card">
+          <div class="dot" style="background:var(--sage);">&#127979;</div>
+          <h3>AI for Teachers &mdash; PD Workshops</h3>
+          <p>Practical professional development that gives teachers time-saving AI workflows within FERPA boundaries &mdash; from report cards to lesson differentiation.</p>
+          <span class="who">Districts &middot; Schools</span>
+        </div>
+
+        <div class="card">
+          <div class="dot" style="background:var(--peach);">&#127918;</div>
+          <h3>Game-Based &amp; Engagement Strategy</h3>
+          <p>Workshops that help studios, product teams, and educators design genuine engagement using game design and learning science &mdash; beyond points and badges.</p>
+          <span class="who">Studios &middot; L&amp;D &middot; Schools</span>
+        </div>
+
+        <div class="card">
+          <div class="dot" style="background:var(--sage);">&#127963;</div>
+          <h3>Grant &amp; Institutional Strategy</h3>
+          <p>Strategic support for federal and foundation proposals in educational technology and game-based learning &mdash; from theory of change to technical approach.</p>
+          <span class="who">Universities &middot; Museums &middot; Non-profits</span>
+        </div>
+
+        <div class="card">
+          <div class="dot" style="background:var(--peach);">&#127908;</div>
+          <h3>Speaking &amp; Keynotes</h3>
+          <p>Talks on AI, game-based learning, and motivational design &mdash; for conferences, foundations, and university audiences.</p>
+          <span class="who">Conferences &middot; Events</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about">
+        <div class="wrap about-inner">
+          <div>
+            <div class="section-tag">About</div>
+            <h2>A rare mix of AI product, game design, and institutional depth.</h2>
+            <p>
+              I'm Ryan Seymour &mdash; a senior product manager and game designer based in Arlington, Virginia.
+              I've shipped AI-powered tools for K&ndash;12 teachers, led mobile development for Minecraft Education
+              (used by tens of millions of students), and produced Smithsonian science games used in classrooms nationwide.
+            </p>
+            <p>
+              Most AI product managers don't have game design credentials. Most game designers can't ship AI tools at scale.
+              Most EdTech leaders haven't done federal-grant or Smithsonian-level institutional work. That intersection is where I do my best work.
+            </p>
+          </div>
+          <div>
+            <ul class="cred-list">
+              <li><strong>Amplify</strong> &mdash; Senior Product Manager, AI-powered tools for K&ndash;12 teachers</li>
+              <li><strong>Mojang Studios</strong> &mdash; Minecraft Education, mobile (35M+ students)</li>
+              <li><strong>Smithsonian Science Education Center</strong> &mdash; educational games &amp; simulations</li>
+              <li><strong>American University</strong> &mdash; M.A. Game Design; Adjunct Professor</li>
+              <li><strong>Credentials</strong> &mdash; AI Product Manager (Udacity); Webby nominee &amp; judge; Certified ScrumMaster</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="section-tag" style="text-align:center;">Get in touch</div>
+      <h2>Building AI for learning? Let's talk.</h2>
+      <p class="section-intro">Whether you're shipping an AI feature, scoping a workshop, or writing a grant &mdash; I'm happy to explore whether there's a fit.</p>
+      <div class="hero-actions">
+        <a href="mailto:ry.seymour@gmail.com" class="btn btn-primary">Email me</a>
+        <a href="https://www.linkedin.com/in/ryan-seymour" class="btn btn-ghost" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div>&copy; 2026 Beyond Gamification LLC &middot; Arlington, Virginia</div>
+      <div>
+        <a href="mailto:ry.seymour@gmail.com">ry.seymour@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
