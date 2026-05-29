@@ -1,6 +1,7 @@
-# Beyond Gamification — Marketing Site
+# Seymour Works — Marketing Site
 
-One-page static site for Beyond Gamification LLC (Ryan Seymour's consulting practice).
+One-page static site for Seymour Works LLC (Ryan Seymour's consulting practice).
+"Beyond Gamification" remains the name of Ryan's signature talk/thesis, referenced on the site.
 
 ## Stack
 - Single `index.html` — HTML + embedded CSS, zero build step, zero dependencies.
