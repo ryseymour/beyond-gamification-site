@@ -131,7 +131,8 @@
 
     /* thesis */
     .thesis { background: var(--slate); color: var(--cream); border-radius: var(--radius); margin-top: 0; }
-    .thesis-inner { padding: 70px 0; }
+    .thesis-inner { padding: 70px 56px; }
+    @media (max-width: 680px) { .thesis-inner { padding: 44px 26px; } }
     .thesis .section-tag { color: var(--peach); }
     .thesis h2 { color: var(--cream); max-width: 22ch; }
     .thesis blockquote {
@@ -160,8 +161,8 @@
 
     /* about */
     .about { background: var(--sage); border-radius: var(--radius); }
-    .about-inner { padding: 64px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
-    @media (max-width: 760px) { .about-inner { grid-template-columns: 1fr; gap: 30px; } }
+    .about-inner { padding: 64px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+    @media (max-width: 760px) { .about-inner { grid-template-columns: 1fr; gap: 30px; padding: 44px 26px; } }
     .about .section-tag { color: var(--slate); }
     .about h2 { max-width: 18ch; }
     .about p { color: var(--slate-soft); margin-top: 16px; }
